@@ -25,6 +25,15 @@ button {
   font-family: 'Roboto', sans-serif;
 }
 
+.container { 
+max-width: 1158;
+padding-left: 15;
+padding-right: 15;
+margin-left: 0 auto;
+margin-right: 0 auto;
+}
+
+
 /* #header */
 .header {
 }
