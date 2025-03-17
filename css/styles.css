@@ -168,7 +168,7 @@ padding: 16px 32px;
 
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 188px;
+  /*padding-bottom: 188px;*/
   background: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
@@ -361,6 +361,8 @@ border-top: none;
   padding-top: 100px;
   padding-bottom: 100px;
   width: 264px;
+  justify-content: flex-start;
+  
 }
 .footer-logo {
   display: inline-block;
