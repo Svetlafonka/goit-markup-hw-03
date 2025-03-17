@@ -1,3 +1,9 @@
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}*/
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
@@ -36,8 +42,18 @@ margin-right: 0 auto;
 
 /* #header */
 .header {
+  border-bottom: 1px solid var(--cornflower);
 }
-.logo-style {
+.header-container{
+  display: flex; 
+  align-items: center;
+}
+.header-logo{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 76px;
+}
+.logo-style{
   font-weight: 700;
   font-size: 18px;
   line-height: 1.16667;
@@ -55,12 +71,20 @@ margin-right: 0 auto;
   color: #4d5ae5;
 }
 .header-nav {
+  display: flex; 
+  align-items: center;
 }
 .header-nav-list {
+  display: flex; 
+  align-items: center;
+  gap: 40px;
 }
 .header-nav-item {
 }
 .header-nav-link {
+  display: block;
+  padding: 24px 0;
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -76,13 +100,20 @@ margin-right: 0 auto;
   color: #404bbf;
 }
 .contacts {
+  margin-left: auto;
   font-style: normal;
+  gap: 40px;
 }
 .header-contacts {
+  display: flex; 
+  align-items: center;
+  gap: 40px;
 }
 .header-contacts-item {
 }
 .header-contacts-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -100,10 +131,17 @@ margin-right: 0 auto;
 /* #end header */
 
 /* #hero */
+.hero-container{
+  width: 496px;
+}
 .hero {
   background-color: #2e2f42;
 }
 .hero-title {
+  padding-top: 188px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -112,6 +150,15 @@ margin-right: 0 auto;
   color: #fff;
 }
 .hero-bt {
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+padding: 16px 32px;
+width: 169px;
+height: 56px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 188px;
   background: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
@@ -128,13 +175,30 @@ margin-right: 0 auto;
 /* #features */
 .features {
 }
-.features-main-title {
-}
+.features-main-title /*{.visually-hidden*/ {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+ }
+
 .features-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 .features-item {
+  width: calc((100%-72px)/4);
 }
 .features-title {
+  padding-top: 120px;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -142,6 +206,7 @@ margin-right: 0 auto;
   color: #2e2f42;
 }
 .features-text {
+padding-bottom: 120px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -155,6 +220,11 @@ margin-right: 0 auto;
   background-color: #f4f4fd;
 }
 .team-main-title {
+  padding-top: 120px;
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -164,14 +234,31 @@ margin-right: 0 auto;
   color: #2e2f42;
 }
 .team-list {
+  display: flex;
+  align-self: center;
+  gap: 24px;
+  padding-bottom: 120px;
 }
 .team-item {
+  
+  width: calc((100%-72px)/4);
   background-color: #ffffff;
+
+  border-radius: 0 0 4px 4px;
+padding: 0px 0px 32px 0px;
+width: 264px;
+height: 380px;
+box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.team-desccription{
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .team-images {
   background: url('path_to_image');
 }
 .team-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -192,6 +279,11 @@ margin-right: 0 auto;
 
 /* #portfolio */
 .portfolio-main-title {
+  padding-top: 120px;
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -201,13 +293,23 @@ margin-right: 0 auto;
   text-transform: capitalize;
 }
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding-bottom: 120px;
 }
 .portfolio-item {
 }
 .portfolio-images {
   background: url('path_to_image');
 }
+.portfolio-desccription{
+padding-top: 32;
+padding-bottom: 32px;
+}
 .portfolio-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -236,7 +338,15 @@ margin-right: 0 auto;
   text-transform: uppercase;
   color: #f4f4fd;
 }
+.footer-container{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 264px;
+}
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+
   font-family: "Raleway", sans-serif;
  font-weight: 700;
   font-size: 18px;
@@ -246,6 +356,7 @@ margin-right: 0 auto;
   color: #4d5ae5;
 }
 .footer-text {
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
