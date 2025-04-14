@@ -144,7 +144,7 @@ margin-right: auto;
 .hero-title {
   max-width: 496px;
 
-  padding-top: 188px;
+  
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 48px;
@@ -205,7 +205,7 @@ padding: 16px 32px;
   gap: 24px;
 }
 .features-item {
-  width: calc((100%-72px)/4);
+  width: calc((100% - 72px)/4);
 }
 .features-title {
   /*padding-top: 120px;*/
@@ -257,9 +257,8 @@ padding: 16px 32px;
   background-color: #ffffff;
 
   border-radius: 0 0 4px 4px;
-padding: 0px 0px 32px 0px;
-width: 264px;
-height: 380px;
+
+
 box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-desccription{
@@ -358,11 +357,7 @@ border-top: none;
   color: #f4f4fd;
 }
 .footer-container{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  width: 264px;
-  justify-content: flex-start;
-  
+
 }
 .footer-logo {
   display: inline-block;
@@ -377,6 +372,7 @@ border-top: none;
   color: #4d5ae5;
 }
 .footer-text {
+  max-width: 264px;
 
   font-weight: 400;
   font-size: 16px;
